@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: ./backend-maria-urbana
+      dockerfile: Dockerfile
+    container_name: maria-urbana-backend
+    restart: unless-stopped
+    env_file:
+      - ./backend-maria-urbana/.env
+    environment:
+      APP_DEBUG: "false"
+    ports:
+      - "8000:80"
+    volumes:
+      - ./backend-maria-urbana/database/database.sqlite:/var/www/html/database/database.sqlite
+      - ./backend-maria-urbana/storage/app/public:/var/www/html/storage/app/public
+
+  frontend:
+    build:
+      context: ./tienda-ropa-prototipo1
+      dockerfile: Dockerfile
+    container_name: maria-urbana-frontend
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-tienda: #F8F5F0;       /* El fondo beige clarito */
+  --bg-sidebar: #C2A68D;      /* El marrón de la barra del admin */
+  --texto-oscuro: #2D2725;    /* El color de los textos */
+  --dorado: #B88E5B;          /* El color de tus botones principales */
+  --dorado-hover: #A07848;    /* El dorado cuando pasás el mouse */
+  --blanco: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background-color: var(--bg-tienda);
+  color: var(--texto-oscuro);
+}
+
+/* Tipografía para los títulos como "María Urbana" */
+h1, h2, h3, .fuente-titulo {
+  font-family: 'Playfair Display', serif;
+}
+
+.test-home {
+  text-align: center;
+  padding-top: 20vh;
+}
